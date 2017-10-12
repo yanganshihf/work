@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.SPJLMapper">
+	    <insert id="add" parameterType="SPJL" >
+	        insert into SPJL (id,name ) values (#{id},#{name})    
+	    </insert>
+	    
+	    <delete id="delete" parameterType="SPJL" >
+	        delete from SPJL where id= #{id}   
+	    </delete>
+	    
+	    <select id="get" parameterType="_int" resultType="SPJL">
+	        select * from   SPJL  where id= #{id}    
+	    </select>
+
+	    <update id="update" parameterType="SPJL" >
+	        update SPJL set name=#{name} where id=#{id}    
+	    </update>
+	    <select id="list" resultType="SPJL">
+	        select * from  SPJL      
+	    </select>	    
+	</mapper>
+
