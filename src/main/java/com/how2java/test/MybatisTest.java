@@ -20,15 +20,18 @@ public class MybatisTest {
 
 	@Test
 	public void testAdd() {
-		Category category = new Category();
-		category.setName("new Category");
-		categoryMapper.add(category);
+		for (int i = 0; i < 13; i++) {
+			Category category = new Category();
+			category.setId(i);
+			category.setName("新用户"+i);
+			categoryMapper.add(category);
+		}
 	}
 
 	@Test
 	public void testList() {
 		System.out.println(categoryMapper);
-		List<Category> cs=categoryMapper.list();
+		List<Category> cs = categoryMapper.list();
 		for (Category c : cs) {
 			System.out.println(c.getName());
 		}
