@@ -33,14 +33,14 @@ public class SPJLController {
 	public ModelAndView listCategory(Page page){
 		ModelAndView mav = new ModelAndView();
 		PageHelper.offsetPage(page.getStart(),5);
-		List<SPJL> cs= spjlService.list();	
+		List<SPJL> spjl= spjlService.list();	
 		// 获取总数
-		int total = (int) new PageInfo<>(cs).getTotal();
+		int total = (int) new PageInfo<>(spjl).getTotal();
 		page.caculateLast(total);
 		// 放入转发参数
-		mav.addObject("cs", cs);
+		mav.addObject("spjl", spjl);
 		// 放入jsp路径
-		mav.setViewName("listCategory");
+		mav.setViewName("listSPJL");
 		return mav;
 	}
 

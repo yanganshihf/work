@@ -5,7 +5,7 @@
 
 	<mapper namespace="com.how2java.mapper.SPJLMapper">
 	    <insert id="add" parameterType="SPJL" >
-	        insert into SPJL (id,name ) values (#{id},#{name})    
+	        insert into SPJL (SPJL_Id,lin_Ye_Ju,shenQing_RQ,pi_Ci,shenQing_WH,piZhun_WH,lei_Xing,shou_Li_Ren,shouLi_RQ,shen_He_Ren,zhuang_Tai,shouLi_TZD,yaoJian_SHD,shenHe_BGD,shen_Pi_Dan ) values (#{SPJL_Id},#{lin_Ye_Ju},#{shenQing_RQ},#{pi_Ci},#{shenQing_WH},#{piZhun_WH},#{lei_Xing},#{shou_Li_Ren},#{shouLi_RQ},#{shen_He_Ren},#{zhuang_Tai},#{shouLi_TZD},#{yaoJian_SHD},#{shenHe_BGD},#{shen_Pi_Dan})    
 	    </insert>
 	    
 	    <delete id="delete" parameterType="SPJL" >

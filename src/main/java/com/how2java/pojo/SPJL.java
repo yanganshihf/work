@@ -116,5 +116,11 @@ public class SPJL {
 	public void setShen_Pi_Dan(String shen_Pi_Dan) {
 		this.shen_Pi_Dan = shen_Pi_Dan;
 	}
+	public int getSPJL_Id() {
+		return SPJL_Id;
+	}
+	public void setSPJL_Id(int sPJL_Id) {
+		SPJL_Id = sPJL_Id;
+	}
 	
 }
